@@ -53,7 +53,7 @@ export default function Tag() {
                                 <p className='lead text-muted'><i className="bi bi-yelp"></i> {config.siteDescription}</p>
                             </div>
                             <div className='mt-4 mt-md-5'>
-                                <Link href='/dashboard' className='btn btn-warning rounded-pill'>
+                                <Link href='/register' className='btn btn-warning rounded-pill'>
                                     <i className="bi bi-pencil"></i> สมัครเป็น creator
                                 </Link>
                             </div>

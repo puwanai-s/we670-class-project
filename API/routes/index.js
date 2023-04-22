@@ -3,6 +3,10 @@ var router = express.Router();
 const Article = require('./../models/article');
 const Tag = require('./../models/tag');
 
+router.get('/', (req, res) => {
+    res.send({status: true, message: 'server is running..'})
+})
+
 router.get('/feature', async (req, res) => {
     const data = await Article.find({ deleted: false }).limit(6);
     res.send(data);

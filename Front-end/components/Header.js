@@ -46,9 +46,14 @@ function Header() {
                                                 <ActiveLink href="/login" onClick={logout}>ออกจากระบบ</ActiveLink>
                                             </li>
                                         </> :
-                                        <li className="nav-item">
-                                            <ActiveLink href="/login">เข้าสู่ระบบ</ActiveLink>
-                                        </li>
+                                        <>
+                                            <li className="nav-item">
+                                                <ActiveLink href="/login">เข้าสู่ระบบ</ActiveLink>
+                                            </li>
+                                            <li className="nav-item">
+                                                <ActiveLink href="/register">ลงทะเบียน</ActiveLink>
+                                            </li>
+                                        </>
                                 }
                             </ul>
                         </div>
