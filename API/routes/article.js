@@ -148,7 +148,9 @@ router.put('/:id', async (req, res) => {
         }
     });
 
-    await createTag(artcleUpdated._id, tags, 0);
+    if (tags)
+        await createTag(artcleUpdated._id, tags, 0);
+        
     res.send({ status: 'updated' });
 });
 
