@@ -6,6 +6,7 @@ import config from './../../config/config';
 import { NextSeo } from 'next-seo';
 import Hot from '@/components/Hot';
 import Tags from '@/components/Tags';
+import Link from 'next/link';
 
 function Detail() {
     const [loading, setLoading] = useState(false);
@@ -41,6 +42,20 @@ function Detail() {
                             </div>
                             <div className='my-3'>
                                 <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
+                            </div>
+                            <div className='mt-5 mb-3'>
+                                <h2><i className="bi bi-hash text-warning"></i> แท็ก/คำค้น</h2>
+                                <nav className="nav">
+                                    {
+                                        data.tags?.map((d, index) => {
+                                            return (
+                                                <Link key={index} className="nav-link text-dark bg-light rounded-pill mb-2 me-2 fb-tag" href={'/tag/' + d.name}>
+                                                    {d.name}
+                                                </Link>
+                                            )
+                                        })
+                                    }
+                                </nav>
                             </div>
                         </div>
                         <div className='col-md-4'>
